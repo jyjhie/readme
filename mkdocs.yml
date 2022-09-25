@@ -1,8 +1,11 @@
-site_name: My Docs
+site_name: 精英计划，入门指北
 theme:
   name: material
+  logo: assets/jyjhie.jpg
+  favicon: assets/jyjhie.jpg
   icon:
     repo: fontawesome/brands/github
+  custom_dir: overrides
   palette: 
     - primary: white
       accent: light blue
@@ -30,9 +33,16 @@ theme:
     - search.suggest
     # - toc.integrate
     - content.code.annotate
-repo_url: https://github.com/mmdjiji/mkdocs-template
-repo_name: mmdjiji/mkdocs-template
+
 edit_uri: edit/main/docs/
+repo_url: https://github.com/jyjhie/readme
+repo_name: jyjhie/readme
+extra:
+  homepage: https://readme.jyjh.club
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/jyjhie/readme
+copyright: <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://readme.jyjh.club/assets/by-nc-sa.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 markdown_extensions:
   - admonition              # 提示块
   - footnotes               # 脚注
@@ -50,11 +60,13 @@ markdown_extensions:
       linenums: true
   - toc:                    # 锚点
       permalink: true
-  - pymdownx.arithmatex     # 数学公式
+  - pymdownx.arithmatex:    # 数学公式
+      generic: true
   - pymdownx.betterem:      # 对加粗和斜体更好的检测
       smart_enable: all
   - pymdownx.magiclink      # 自动识别超链接
   - pymdownx.tasklist:      # 复选框checklist
       custom_checkbox: true
-extra:
-  homepage: https://github.com/mmdjiji/mkdocs-template
+extra_javascript:
+  - mathjax/config.js
+  - mathjax/tex-mml-chtml.js
